@@ -29,10 +29,9 @@ module async_fifo_TB;
         @(posedge wrclk) 
         if (!full) begin 
         w_en = (i%2 == 0)? 1'b1 : 1'b0; 
-        datain = (w_en) ? $random: datain;end
-       /* if (w_en) begin
-          datain = $random;
-        end */
+        datain = (w_en) ? $random: datain;
+        end
+       
       end
       end
   
@@ -60,10 +59,9 @@ module async_fifo_TB;
         @(posedge wrclk) 
         if (!full) begin 
         w_en = (i%2 == 0)? 1'b1 : 1'b0;
-        datain = (w_en) ? $random: datain; end
-        /* if (w_en) begin
-          datain = $random;
-        end */
+        datain = (w_en) ? $random: datain; 
+        end
+        
       end
       end
 
